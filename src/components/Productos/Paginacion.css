@@ -1,0 +1,48 @@
+
+/* Contenedor de todos los controles de paginación. */
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 32px 0;
+}
+
+/* Estilos compartidos por los botones. */
+.paginacion-boton,
+.paginacion-numero {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Efecto visual al pasar el cursor. */
+.paginacion-boton:hover:not(:disabled),
+.paginacion-numero:hover {
+  border-color: #76da44;
+  background-color: #f3fbea;
+}
+
+/* Identifica la página que está seleccionada. */
+.paginacion-numero.activo {
+  border-color: #76da44;
+  background-color: #76da44;
+  color: #17220f;
+  font-weight: 700;
+}
+
+/* Indica que no se puede retroceder o avanzar más. */
+.paginacion-boton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
